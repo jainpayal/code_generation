@@ -1,0 +1,23 @@
+<div class="row col-md-8 col-md-offset-2">
+	<%= render partial: "form"%>
+	<h2>Listing codes</h2>
+	<div class="table-responsive table-bordered">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Secret Code</th>
+					<th>User Email</th>
+				</tr>
+			</thead>   
+			<tbody>
+				<% @secret_codes.each do |sc| %>
+					<tr class= "dark-row">
+						<td><%= sc.code %></td>
+				    <td><%= sc.user_email %></td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+		<%= will_paginate @secret_codes %>
+	</div>
+</div>

@@ -1,0 +1,9 @@
+<%= form_for(:secret_code, url: secret_code_create_path, html: { class: "pull-right"}) do |f| %>
+	<div class="col-md-6">
+		<%= f.select(:code, options_for_select([1,10,20,50,100], :selected => 10),{}, class: "form-control") %>
+	</div>
+	<div class="col-md-4">
+		<%=f.submit "Generate secret code",class: "btn btn-primary" %>
+	</div>
+<% end %>
+<hr/>
